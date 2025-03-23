@@ -62,7 +62,7 @@ h1{
   gap: 10vw;
   align-items: center; /* Centers vertically */
   height: 80vh;
-  width: 70vw;
+  width: 100vw;
   align-items: center;
   flex-wrap: wrap;
   display: flex;
@@ -178,8 +178,8 @@ h1{
 
 .NoQ{
   width: 100%;
-  max-width: 150px;
-  height: 20px;
+  max-width: 180px;
+  height: 50px;
   padding: 12px;
   font-size: 18px;
   border-radius: 25px;
@@ -488,3 +488,189 @@ h1{
   background: rgba(0, 0, 0, 0.9);
 }
 
+:root {
+  --primary-color: #1a73e8;
+  --primary-dark: #0d62d1;
+  --secondary-color: #34a853;
+  --dark-blue: rgb(6, 7, 49);
+  --light-bg: #f0f7ff;
+  --white: #ffffff;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-600: #6c757d;
+  --gray-800: #343a40;
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--light-bg);
+  color: var(--gray-800);
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  display: flex;
+  align-items: center;
+  background-color: var(--dark-blue);
+  height: 80px;
+  width: 100%;
+  padding: 0 40px;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+#logo {
+  height: 50px;
+  width: auto;
+  margin-right: 16px;
+  border-radius: 12px;
+  transition: transform var(--transition-normal);
+}
+
+#logo:hover {
+  transform: scale(1.05);
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--white);
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Main container */
+.outer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  min-height: calc(100vh - 80px);
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
+}
+
+/* Card styling */
+.upload, .search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white);
+  border-radius: 16px;
+  padding: 40px;
+  width: 360px;
+  height: 450px;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.upload:hover, .search:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+}
+
+.upload::before, .search::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  opacity: 0;
+  transition: opacity var(--transition-normal);
+}
+
+.upload:hover::before, .search:hover::before {
+  opacity: 1;
+}
+
+/* Icon container */
+.icon-container {
+  margin-bottom: 30px;
+  transition: transform var(--transition-normal);
+  background-color: var(--gray-100);
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.upload:hover .icon-container, .search:hover .icon-container {
+  transform: scale(1.05);
+  background-color: rgba(26, 115, 232, 0.1);
+}
+
+.icon-container img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* Title styling */
+.card-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--gray-800);
+  margin: 20px 0;
+  text-align: center;
+}
+
+/* Button styling */
+.action-button {
+  width: 100%;
+  padding: 14px 0;
+  background: linear-gradient(90deg, var(--primary-color), #4285f4);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  letter-spacing: 0.8px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  text-transform: uppercase;
+  box-shadow: 0 4px 8px rgba(26, 115, 232, 0.2);
+}
+
+.action-button:hover {
+  background: linear-gradient(90deg, var(--primary-dark), #3b78e7);
+  box-shadow: 0 6px 12px rgba(26, 115, 232, 0.3);
+}
+
+.action-button:active {
+  transform: translateY(2px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .outer {
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .upload, .search {
+    width: 100%;
+    max-width: 360px;
+  }
+}
