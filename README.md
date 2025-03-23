@@ -76,7 +76,7 @@ Welcome to **Diffiscore**, a powerful platform for uploading, storing, and searc
    cd backend
    uvicorn main:app --reload
    ```
-5. **Start the frontend application:**
+5. **Start the frontend application:(In case of frontend error: Module not found: Error: Can't resolve 'framer-motion', then npm install framer-motion and same method for other components)**
    ```bash
    cd ../frontend
    npm start
