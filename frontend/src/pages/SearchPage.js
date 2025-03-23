@@ -82,7 +82,7 @@ const SearchPage = () => {
                   }}
                   className="download-btn"
                 >
-                  Download Image
+                  Download
                 </button>
               </div>
             </div>
