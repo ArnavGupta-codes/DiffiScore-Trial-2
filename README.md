@@ -1,6 +1,6 @@
 # DiffiScore-Trial-2
 
-🚀 **DiifiScore(CSIS HACKATHON 2025)**
+🚀 **DiffiScore(CSIS HACKATHON 2025)**
 
 **Authors:**  
 Arnav, Tanay, Anish, Athish  
