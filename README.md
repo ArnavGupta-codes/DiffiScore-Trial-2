@@ -1,68 +1,96 @@
 # DiffiScore-Trial-2
-🚀 Multilingual Insurance RAG System (Quark Hackathon 2025)
-Authors:
-Arnav, Tanay, Anish, Athish
-Date: 3/10/2025
-Link to the video demonstration: https://drive.google.com/file/d/1hWx_WvTkvIpeKIa7PS-7jWUYRLmyi13n/view?usp=drive_link
 
-📝 Introduction
-Welcome to Diffiscore, a powerful platform for uploading, storing, and searching questions efficiently. Whether you're a student, teacher, or researcher, Diffiscore makes it easy to manage question banks.
+🚀 **DiifiScore(CSIS HACKATHON 2025)**
 
-🌟 Key Features
-Uploading Questions:
-Through the Upload Page, a user can add multiple images with the same tag at once which can be helpful for a prof if we wants to make a exam on a specific topic with multiple questions, so the prof does not have to repeatitively keep adding single images which can be irritating.
-It allows the user to delete images after selection, if he has selected a wrong image for upload.
+**Authors:**  
+Arnav, Tanay, Anish, Athish  
 
-Searching and Accessing Questions:
-To retrieve your saved questions, click on "Search Questions," enter the tag, specify the number of questions, and instantly view them in a organized manner and on clicking the image you can see the expanded view of the whole question and for each question this can be done. But that's not all—you can also access questions uploaded by others, making Diffiscore a collaborative and resourceful platform for learning. Also it provides feature of Downloading the image on your local device.
+**Date:** 3/10/2025  
 
-🛠️ Tech Stack
-🚀 FastAPI for backend
-🔍 FAISS for image embeddings and similarity search
-🤗 Hugging Face Embeddings for text and image embeddings
-🖼️ PIL (Pillow) for image processing
-🌐 Uvicorn for running the FastAPI server
-⚛️ React.js for frontend
-📡 Axios for API communication
-🎨 Tailwind CSS for modern UI
-⚡ Vite for optimized frontend development
-🗄️ FAISS Vector Store for embedding storage
-💾 Local Storage for image storage
+**Link to the video demonstration:**  
+[Watch Here](https://drive.google.com/file/d/1hWx_WvTkvIpeKIa7PS-7jWUYRLmyi13n/view?usp=drive_link)
 
-⚙️ Installation & Setup
-📌 Prerequisites
-🐍 Python 3.13+
-📂 FAISS Index for efficient similarity search
-🤗 Hugging Face Transformers for text processing
-💻 Reactjs for frontend
-⚡ FastAPI as the backend framework
+---
 
-📥 Installation Steps
-1) Clone the repository:
-git clone https://github.com/ArnavGupta-codes/DiffiScore-Trial-2.git
+## 📝 Introduction
+Welcome to **Diffiscore**, a powerful platform for uploading, storing, and searching questions efficiently. Whether you're a student, teacher, or researcher, Diffiscore makes it easy to manage question banks.
 
-2) Create and activate virtual environment:
-python -m venv .venv
-source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+---
 
-3) Install dependencies:
-pip install -r requirements.txt
+## 🌟 Key Features
 
-4)Go to the backend directory and run the backend
-cd backend
-uvicorn main:app --reload
+### **Uploading Questions:**
+- Users can add multiple images with the same tag at once, making it easy for a professor to create an exam on a specific topic.
+- Users can delete images after selection if an incorrect image is uploaded.
 
-5)
-cd ..
-cd frontend
-npm start
+### **Searching and Accessing Questions:**
+- Retrieve saved questions by clicking **"Search Questions"**, entering the tag, and specifying the number of questions.
+- View questions in an organized manner with an expandable view.
+- Access questions uploaded by others for a collaborative experience.
+- Download images directly to your local device.
 
-6)Open the website and it will run smoothly.
+---
 
-📂 Directory Structure
+## 🛠️ Tech Stack
+
+- 🚀 **FastAPI** - Backend framework
+- 🔍 **FAISS** - Image embeddings and similarity search
+- 🤗 **Hugging Face** - Text and image embeddings
+- 🖼️ **PIL (Pillow)** - Image processing
+- 🌐 **Uvicorn** - FastAPI server
+- ⚛️ **React.js** - Frontend framework
+- 📡 **Axios** - API communication
+- 🎨 **Tailwind CSS** - Modern UI styling
+- ⚡ **Vite** - Optimized frontend development
+- 🗄️ **FAISS Vector Store** - Embedding storage
+- 💾 **Local Storage** - Image storage
+
+---
+
+## ⚙️ Installation & Setup
+
+### 📌 Prerequisites
+- 🐍 **Python 3.13+**
+- 📂 **FAISS Index** for efficient similarity search
+- 🤗 **Hugging Face Transformers** for text processing
+- 💻 **React.js** for frontend
+- ⚡ **FastAPI** as the backend framework
+
+### 📥 Installation Steps
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/ArnavGupta-codes/DiffiScore-Trial-2.git
+   ```
+2. **Create and activate a virtual environment:**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+3. **Install dependencies:**
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. **Run the backend server:**
+   ```bash
+   cd backend
+   uvicorn main:app --reload
+   ```
+5. **Start the frontend application:**
+   ```bash
+   cd ../frontend
+   npm start
+   ```
+6. **Open the website and start using DiffiScore!**
+
+---
+
+## 📂 Directory Structure
+
+```
 DiffiScore/
 ├── backend/
-│   ├── _pycache_/
+│   ├── __pycache__/
 │   ├── backend/
 │   │   ├── faiss_index/
 │   │   └── uploads/
@@ -95,7 +123,12 @@ DiffiScore/
 │   ├── package-lock.json
 │   ├── package.json
 │   └── README.md
+```
 
-📚 References
-📘 FastAPI Documentation: https://fastapi.tiangolo.com/
-⚛️ React Documentation: https://react.dev/learn
+---
+
+## 📚 References
+
+- 📘 **[FastAPI Documentation](https://fastapi.tiangolo.com/)**
+- ⚛️ **[React Documentation](https://react.dev/learn)**
+
